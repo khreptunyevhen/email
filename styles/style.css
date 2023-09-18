@@ -1,0 +1,152 @@
+:root {
+  --transition: all 0.5s easy-in;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  padding: 2px;
+  border: none;
+  cursor: pointer;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #d5d5d5;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+}
+
+input {
+  border-bottom: 1px solid #b8b3b3;
+}
+
+textarea {
+  resize: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.email {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 80%;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.email.expand {
+  width: 90%;
+  /* height: 80vh; */
+}
+
+.window-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 15px 10px;
+  background-color: #b8b3b3;
+  transition: var(--transition);
+}
+
+.window-controls button:hover {
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.email-body {
+  padding: 0 15px;
+  transform: scale(1);
+}
+
+.email-body.hide {
+  display: none;
+  transform: scale(0);
+}
+
+.email-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.email-control div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  transition: var(--transition);
+}
+
+.email-control div button:hover,
+.clean:hover {
+  border-radius: 5px;
+  background-color: #b8b3b3;
+}
+
+button[type="submit"] {
+  padding: 5px 15px;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #262626;
+}
+
+.email-control div button[type="submit"]:hover {
+  background-color: #262626;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.email-to {
+  position: relative;
+}
+
+#users-list {
+  height: 210px;
+  position: absolute;
+  width: max-content;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  list-style-type: none;
+  overflow-x: auto;
+  z-index: 10;
+}
+
+#users-list li {
+  padding: 0 10px;
+}
+
+#users-list li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+#users-list li:nth-child(1) {
+  padding-top: 10px;
+}
+
+#users-list li:last-child {
+  padding-bottom: 10px;
+}

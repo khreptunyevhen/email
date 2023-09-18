@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/f963fbf1b8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Create an email</title>
+  </head>
+  <body>
+    <div class="email">
+      <div class="window-controls">
+        <button class="collapse">
+          <i class="fa-solid fa-minus"></i>
+        </button>
+        <button class="expand">
+          <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          <!-- <i class="fa-solid fa-up-right-and-down-left-from-center"></i> -->
+        </button>
+        <button class="close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <form action="#!" class="email-body">
+        <div class="email-to">
+          <!-- <label for="to-user">To:</label> -->
+          <input type="email" id="to-user" placeholder="Recipients" />
+          <ul class="hidden" id="users-list"></ul>
+        </div>
+        <div class="email-subject">
+          <!-- <label for="subject">Subject:</label> -->
+          <input type="text" id="subject" placeholder="Subject" required />
+        </div>
+        <div class="email-text">
+          <textarea
+            name="email-text"
+            id="text"
+            cols="30"
+            rows="10"
+            placeholder="Message here..."
+          ></textarea>
+          <div class="attached-files"></div>
+        </div>
+        <div class="email-control">
+          <button type="button" class="clean">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+          <div>
+            <button type="button" class="emogi">
+              <i class="fa-regular fa-face-smile"></i>
+            </button>
+            <button type="button" class="add-files">
+              <i class="fa-solid fa-paperclip"></i>
+            </button>
+            <button type="submit">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
