@@ -26,21 +26,36 @@
       </div>
       <form action="#!" class="email-body">
         <div class="email-to">
+          <ul id="recipients"></ul>
           <!-- <label for="to-user">To:</label> -->
-          <input type="email" id="to-user" placeholder="Recipients" />
+          <input
+            type="email"
+            id="to-user"
+            autocomplete="off"
+            placeholder="Recipients"
+            required
+          />
           <ul class="hidden" id="users-list"></ul>
         </div>
         <div class="email-subject">
           <!-- <label for="subject">Subject:</label> -->
-          <input type="text" id="subject" placeholder="Subject" required />
+          <input
+            type="text"
+            id="subject"
+            autocomplete="off"
+            placeholder="Subject"
+            required
+          />
         </div>
         <div class="email-text">
           <textarea
+            spellcheck="true"
             name="email-text"
             id="text"
             cols="30"
             rows="10"
             placeholder="Message here..."
+            required
           ></textarea>
           <div class="attached-files"></div>
         </div>

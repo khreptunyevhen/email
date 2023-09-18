@@ -1,5 +1,5 @@
 :root {
-  --transition: all 0.5s easy-in;
+  --transition: all 0.5s ease-in;
 }
 
 *,
@@ -33,6 +33,7 @@ textarea {
 }
 
 input {
+  appearance: none;
   border-bottom: 1px solid #b8b3b3;
 }
 
@@ -124,7 +125,7 @@ button[type="submit"] {
 }
 
 #users-list {
-  height: 210px;
+  max-height: 210px;
   position: absolute;
   width: max-content;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -137,6 +138,19 @@ button[type="submit"] {
 
 #users-list li {
   padding: 0 10px;
+  cursor: pointer;
+  /* transition: var(--transition); */
+  transition: all 0.3s ease-in;
+}
+
+#users-list li.choosed {
+  background-color: #b8b3b3;
+  color: #d5d5d5;
+  cursor: not-allowed;
+}
+
+#users-list li:hover {
+  background-color: #b8b3b3;
 }
 
 #users-list li:not(:last-child) {
